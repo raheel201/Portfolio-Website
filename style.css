@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+:root{
+    --primaryColor:#101820;
+    --secondColor:#009bf9;
+    --textColor:#F2FAFF;
+    --gray:rgba(42,53,62,0.4);
+}
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none!important;
+    border: none;
+    list-style: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    background: var(--primaryColor);
+    color: var(--textColor);
+}
+#mainNavbar{
+    background-color: var(--primaryColor)!important;
+    border-bottom: 1px solid var(--gray);
+}
+
+#mainNavbar .nav-item .nav-link{
+    position: relative;
+    color: var(--textColor);
+}
+
+#mainNavbar .nav-item .nav-link::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondColor);
+    bottom: -3px;
+    left: 0;
+    transition: ease .40s;
+    -webkit-transition:ease .40s ;
+    -moz-transition:ease .40s ;
+    -o-transition:ease .40s ;
+    
+}
+
+#mainNavbar .nav-item:not(:last-child) .nav-link:hover::after{
+    width: 100%;
+}
+
+section{
+    padding: 10px 0;
+    /* margin-top: 80px; */
+}
+
+.section-title{
+    padding-bottom: 1rem;
+    position: relative;
+}
+.sub-title{
+    color: var(--secondColor);
+}
+#hero .social a{
+    transition: all .4s;
+    
+}
+#hero .social a:hover{
+    color: var(--textColor);
+    transform: scale(1.2);
+}
+.typer{
+    color: var(--secondColor);
+}
+
+.skill{
+    background-color: var(--gray);
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .40s;
+}
+.skill:hover{
+    transform: scale(1.12) rotate(-5deg);
+    box-shadow: 0px 10px 25px 10px rgba(33, 120, 179, 0.4);
+}
+.service-box{
+    transition: all .40s;
+}
+.service-box:hover{
+    background-color: #021f31;
+    border-radius:15px;
+    padding: 3px;
+    transform: scale(1.12);
+}
+.project{
+    background-color: var(--gray);
+}
+
+
+.contact-bg{
+    background-color: var(--secondColor);
+    height: 70vh;
+    padding: 20px;
+}
+
+form input,textarea{
+    color: var(--textColor)!important;
+    background-color:var(--primaryColor)!important;
+    border: 3px solid var(--gray)!important;
+}
+
+.form-control::placeholder{
+    color:rgba(255, 255, 255, 0.4);
+}
